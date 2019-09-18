@@ -21,6 +21,6 @@ Software for building logical circuits and simulating behavior.
 Software for writing, assembling, and running assembly code for MIPS Architecture
   Two files:
     
-    Mars_2191_c.jar - Java archive for running Mars
+    Mars_2191_c.jar - Java archive for running Mars (slightly modified from original release, e.g. addition of push and pop instructions, removal of need for '$' before register names
     
     twentyone.asm - assembly file for game of blackjack, one player against the 'dealer,' one round at a time

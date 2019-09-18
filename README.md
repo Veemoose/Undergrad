@@ -5,6 +5,7 @@ Small collection of programming assignments/projects
 # Logisim
 Software for building logical circuits and simulating behavior. 
   Two files:
+    
     logisim-2.7.2-2191_b.jar - Java archive, for running Logisim
     
     Single_Cycle_CPU.circ - file containing all of the circuits created for a simple, single-cycle/single core CPU
@@ -19,6 +20,7 @@ Software for building logical circuits and simulating behavior.
 # Mars: MIPS Assembler/Runtime Simulator
 Software for writing, assembling, and running assembly code for MIPS Architecture
   Two files:
+    
     Mars_2191_c.jar - Java archive for running Mars
     
     twentyone.asm - assembly file for game of blackjack, one player against the 'dealer,' one round at a time

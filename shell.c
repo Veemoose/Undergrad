@@ -1,4 +1,8 @@
 // Vincent Musso (vjm13)
+// Recreation of Unix shell,
+// capable of running most commands, including standard ones like
+// ls, cd, exit, file creation/deletion, I/O redirection, etc.
+
 #define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>

@@ -1,10 +1,4 @@
-# CS/COE 1501 Assignment 5
-
-## Goal:
-
-To get hands on experience with algorithms to perform mathematical operations on large integers, using RSA as an example.
-
-Note that the result of this project should NEVER be used for any security applications.  It is purely instructive.  Always use trusted and tested crypto libraries.
+# Project Description
 
 ## High-level description:
 You will be writing two programs.  The first will generate a 512-bit RSA keypair and store the public and private keys in files named `pubkey.rsa` and `privkey.rsa`, respectively.
@@ -50,37 +44,3 @@ In order for either of these programs to work, however, you will need to complet
 		1.  "encrypt" this value with the key from `pubkey.rsa` (i.e., raise it to the e<sup>th</sup> power mod n).
 			*  Your program should exit and display an error if `pubkey.rsa` is not found in the current directory.
 		1.  Compare the hash value that was generated from `myfile.txt` to the one that was recovered from the signature. Print a message to the console indicating whether the signature is valid (i.e., whether the values are the same).
-
-## Submission Guidelines:
-*  **DO NOT SUBMIT** any IDE package files.
-*  You must name your key generation program `RsaKeyGen.java`, and your signing/verification program `RsaSign.java`. Thus:
-*  You must be able to compile your program by running `javac RsaKeyGen.java` and `javac RsaSign.java`.
-*  You must be able to run your key generation program by running `java RsaKeyGen`, and your signing/verification program with `java RsaSign s <filename>` and `java RsaSign v <filename>`.
-*  You must fill out `info_sheet.txt`.
-*  Be sure to remember to push the latest copy of your code back to your GitHub repository before the the assignment is due.  At the deadline, the repositories will automatically be copied for grading.  Whatever is present in your GitHub repository at that time will be considered your submission for this assignment.
-
-## Additional Notes/Hints:
-*  An example of using `java.security.MessageDigest` to generate the SHA-256 hash of a file is provided in `HashEx.java`
-*  You may find the creation of `pubkey.rsa`, `privkey.rsa`, and signature files to be most easily accomplished through the use of `java.io.ObjectOutputStream`.  The format of your key and signature files is up to you.
-*  **NEVER USE CODE FROM THIS PROJECT IN PRODUCTION CODE.**  This is purely instructive.  Always use trusted and tested crypto libraries.
-
-## Grading Rubric
-*  LargeInteger
-	*  `multiply` works properly:  20
-	*  `XGCD` works properly:  25
-	*  `modularExp`:  10
-*  Key generation
-	*  p and q are generated appropriately:  3
-	*  n and φ(n) computed appropriately:  3
-	*  e is selected appropriately:  4
-	*  d is selected appropriately:  5
-	*  Key files are generated appropriately:  5
-*  Signing
-	*  Hash is generated correctly:  2
-	*  Hash is "decrypted" (signed) correctly:  5
-	*  Signature file is generated appropriately:  3
-*  Verification
-	*  Hash is re-generated correctly:  2
-	*  Signature is "encrypted" (verified) correctly:  5
-	*  Signed files are appropriated verified:  3
-*  Assignment info sheet/submission:  5

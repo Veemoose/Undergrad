@@ -1,0 +1,33 @@
+v2.0 raw
+# to load this file into Logisim:
+# 1. redirect the output from the assembler to a file
+# 2. use the poke tool in Logisim and right-click the ROM component
+# 3. select Load Image menu option
+# 4. load the saved file
+08501	#line 2 (PC=0): li	r5, 1
+08730	#line 3 (PC=1): li	r7, 0x30
+36900	#line 5 (PC=2): adi	r1, r5, 0
+90007	#line 6 (PC=3): call	sqrt
+04800	#line 7 (PC=4): put	r1
+36D01	#line 8 (PC=5): adi	r5, r5, 1
+80002	#line 9 (PC=6): j	loop_top
+08202	#line 12 (PC=7): li	r2, 2
+4CA12	#line 13 (PC=8): blt	r1, r2, sqrt_ret
+3BF01	#line 16 (PC=9): sbi	r7, r7, 1
+17900	#line 17 (PC=10): st	r7, 0, r1
+48902	#line 20 (PC=11): sri	r1, r1, 2
+90007	#line 21 (PC=12): call	sqrt
+44901	#line 24 (PC=13): sli	r1, r1, 1
+34A00	#line 25 (PC=14): adi	r2, r1, 0
+35201	#line 26 (PC=15): adi	r2, r2, 1
+13860	#line 29 (PC=16): ld	r3, r7, 0
+37F01	#line 30 (PC=17): adi	r7, r7, 1
+08400	#line 33 (PC=18): li	r4, 0
+35600	#line 34 (PC=19): adi	r6, r2, 0
+80017	#line 35 (PC=20): j	mul_loop_cond
+1A280	#line 37 (PC=21): add	r4, r4, r2
+3B601	#line 38 (PC=22): sbi	r6, r6, 1
+630FE	#line 40 (PC=23): bnz	r6, mul_loop
+4DC02	#line 42 (PC=24): blt	r3, r4, sqrt_ret
+35100	#line 43 (PC=25): adi	r1, r2, 0
+68000	#line 46 (PC=26): ret

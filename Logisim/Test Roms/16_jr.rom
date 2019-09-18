@@ -1,0 +1,28 @@
+v2.0 raw
+# to load this file into Logisim:
+# 1. redirect the output from the assembler to a file
+# 2. use the poke tool in Logisim and right-click the ROM component
+# 3. select Load Image menu option
+# 4. load the saved file
+08500	#line 1 (PC=0): li	r5, 0
+46902	#line 4 (PC=1): sli	r1, r5, 2
+0820A	#line 5 (PC=2): li	r2, func1
+18A20	#line 6 (PC=3): add	r1, r1, r2
+90009	#line 8 (PC=4): call	trampoline
+36D01	#line 9 (PC=5): adi	r5, r5, 1
+08403	#line 10 (PC=6): li	r4, 3
+5ACFA	#line 11 (PC=7): bne	r5, r4, call_loop
+00000	#line 12 (PC=8): halt
+64800	#line 15 (PC=9): jr	r1
+0C111	#line 18 (PC=10): lui	r1, 0x11
+40911	#line 19 (PC=11): ori	r1, r1, 0x11
+04800	#line 20 (PC=12): put	r1
+68000	#line 21 (PC=13): ret
+0C122	#line 24 (PC=14): lui	r1, 0x22
+40922	#line 25 (PC=15): ori	r1, r1, 0x22
+04800	#line 26 (PC=16): put	r1
+68000	#line 27 (PC=17): ret
+0C133	#line 30 (PC=18): lui	r1, 0x33
+40933	#line 31 (PC=19): ori	r1, r1, 0x33
+04800	#line 32 (PC=20): put	r1
+68000	#line 33 (PC=21): ret

@@ -1,0 +1,35 @@
+v2.0 raw
+# to load this file into Logisim:
+# 1. redirect the output from the assembler to a file
+# 2. use the poke tool in Logisim and right-click the ROM component
+# 3. select Load Image menu option
+# 4. load the saved file
+6C020	#line 4 (PC=0): in	r1
+5C8FF	#line 5 (PC=1): bez	r1, top
+48A04	#line 8 (PC=2): sri	r2, r1, 4
+08303	#line 11 (PC=3): li	r3, 3
+55306	#line 12 (PC=4): beq	r2, r3, its_digit
+08304	#line 13 (PC=5): li	r3, 4
+55308	#line 14 (PC=6): beq	r2, r3, its_upper
+08306	#line 15 (PC=7): li	r3, 6
+5530C	#line 16 (PC=8): beq	r2, r3, its_lower
+80000	#line 19 (PC=9): j	top
+0823A	#line 23 (PC=10): li	r2, 0x3a
+50AF5	#line 24 (PC=11): bge	r1, r2, top
+38930	#line 25 (PC=12): sbi	r1, r1, 0x30
+80019	#line 26 (PC=13): j	display_it
+08241	#line 30 (PC=14): li	r2, 0x41
+4CAF1	#line 31 (PC=15): blt	r1, r2, top
+08247	#line 32 (PC=16): li	r2, 0x47
+50AEF	#line 33 (PC=17): bge	r1, r2, top
+38937	#line 34 (PC=18): sbi	r1, r1, 55
+80019	#line 35 (PC=19): j	display_it
+08261	#line 39 (PC=20): li	r2, 0x61
+4CAEB	#line 40 (PC=21): blt	r1, r2, top
+08267	#line 41 (PC=22): li	r2, 0x67
+50AE9	#line 42 (PC=23): bge	r1, r2, top
+38957	#line 43 (PC=24): sbi	r1, r1, 87
+47F04	#line 47 (PC=25): sli	r7, r7, 4
+279E0	#line 48 (PC=26): or	r7, r7, r1
+07800	#line 49 (PC=27): put	r7
+80000	#line 50 (PC=28): j	top

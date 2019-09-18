@@ -1,8 +1,4 @@
-## Goal:
-
-To get hands on experience with algorithms to perform mathematical operations on large integers, using RSA as an example.
-
-Note that the result of this project should NEVER be used for any security applications.  It is purely instructive.  Always use trusted and tested crypto libraries.
+## Project Description
 
 ## High-level description:
 You will be writing two programs.  The first will generate a 512-bit RSA keypair and store the public and private keys in files named `pubkey.rsa` and `privkey.rsa`, respectively.
